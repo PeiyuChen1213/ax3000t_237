@@ -23,3 +23,8 @@ git clone https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app
 
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+
+# Force install custom feeds to override built-in versions
+./scripts/feeds install -a -f -p passwall_packages
+./scripts/feeds install -a -f -p passwall
+./scripts/feeds install -a -f -p helloworld
